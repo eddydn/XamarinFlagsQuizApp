@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#242E38"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+   <RelativeLayout
+      android:layout_marginLeft="30dp"
+      android:layout_marginRight="30dp"
+      android:layout_marginTop="30dp"
+      android:padding="20dp"
+      android:elevation="4dp"
+      android:background="@drawable/round_corner"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+
+     <TextView
+       android:id="@+id/txtTitle"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_centerHorizontal="true"
+       android:gravity="center"
+       android:text="BEST SCORE"
+       android:textStyle="bold"
+       android:textSize="30sp"
+       />
+     <ListView
+       android:id="@+id/lstView"
+       android:layout_below="@+id/txtTitle"
+       android:layout_marginTop="10dp"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       />
+     
+    </RelativeLayout>
+</RelativeLayout>

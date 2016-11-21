@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <item name="colorPrimary">#3F51B5</item>
+    <item name="colorPrimaryDark">#242E38</item>
+    <item name="colorAccent">#FF4081</item>
+  </style>
+
+  <style name="MyButton" parent="Theme.AppCompat.Light">
+    <item name="colorControlHighlight">#1CB3BC</item>
+  </style>
+  
+</resources>
