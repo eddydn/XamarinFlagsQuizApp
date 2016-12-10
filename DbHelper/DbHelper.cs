@@ -119,7 +119,7 @@ namespace XamarinFlagsQuizApp.DbHelper
             ICursor c;
             try
             {
-                c = db.RawQuery("SELECT * FROM Ranking ORDER BY Score", null);
+                c = db.RawQuery("SELECT * FROM Ranking ORDER BY Score DESC", null);
                 if (c == null) return null;
                 c.MoveToNext();
                 do
