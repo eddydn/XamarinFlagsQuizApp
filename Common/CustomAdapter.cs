@@ -59,7 +59,7 @@ namespace XamarinFlagsQuizApp.Common
                 imgTop.SetBackgroundResource(Resource.Drawable.top2);
             else
                 imgTop.SetBackgroundResource(Resource.Drawable.top3);
-            txtTop.Text =$"{ lstRanking[position].Score}";
+            txtTop.Text =$"{ lstRanking[position].Score.ToString("0.00")}";
             
 
             return view;

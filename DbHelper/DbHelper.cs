@@ -105,7 +105,7 @@ namespace XamarinFlagsQuizApp.DbHelper
             
         }
 
-        public void InsertScore(int score)
+        public void InsertScore(double score)
         {
             String query = $"INSERT INTO Ranking(Score) VALUES({score})";
             SQLiteDatabase db = this.WritableDatabase;
@@ -125,7 +125,7 @@ namespace XamarinFlagsQuizApp.DbHelper
                 do
                 {
                     int Id = c.GetInt(c.GetColumnIndex("Id"));
-                    int Score = c.GetInt(c.GetColumnIndex("Score"));
+                    double Score = c.GetDouble(c.GetColumnIndex("Score"));
 
                     Ranking ranking = new Model.Ranking(Id, Score);
                     lstRanking.Add(ranking);
@@ -179,6 +179,35 @@ namespace XamarinFlagsQuizApp.DbHelper
             }
             catch { }
             return lstQuestion;
+        }
+
+
+        //Update 2.0
+        public int GetPlayCount(int Level)
+        {
+            int result = 0;
+            SQLiteDatabase db = this.WritableDatabase;
+            ICursor c;
+            try
+            {
+                c = db.RawQuery($"SELECT PlayCount FROM UserPlayCount WHERE Level={Level}",null);
+                if (c == null) return 0;
+                c.MoveToFirst();
+                do
+                {
+                    result = c.GetInt(c.GetColumnIndex("PlayCount"));
+                } while (c.MoveToNext());
+                c.Close();
+
+            }catch(Exception e) { }
+            return result;
+        }
+
+        public void UpdatePlayCount(int Level,int PlayCount)
+        {
+            string query = $"UPDATE UserPlayCount SET PlayCount={PlayCount} WHERE Level={Level}";
+            SQLiteDatabase db = this.WritableDatabase;
+            db.ExecSQL(query);
         }
 
 

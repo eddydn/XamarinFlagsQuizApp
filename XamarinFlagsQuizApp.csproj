@@ -86,7 +86,6 @@
     <None Include="packages.config" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
-    <AndroidResource Include="Resources\Raw\MyDB.db" />
     <AndroidResource Include="Resources\layout\Playing.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
@@ -99,6 +98,7 @@
     <AndroidResource Include="Resources\layout\row.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\Raw\MyDB.db" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml">

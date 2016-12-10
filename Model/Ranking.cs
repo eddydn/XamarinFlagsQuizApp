@@ -15,8 +15,8 @@ namespace XamarinFlagsQuizApp.Model
     public class Ranking
     {
         public int Id { get; set; }
-        public int Score { get; set; }
-        public Ranking(int Id,int Score)
+        public double Score { get; set; }
+        public Ranking(int Id,double Score)
         {
             this.Id = Id;
             this.Score = Score;
