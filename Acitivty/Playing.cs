@@ -113,6 +113,7 @@ namespace XamarinFlagsQuizApp.Acitivty
         protected override void OnResume()
         {
             base.OnResume();
+            index = 0;
             questionPlay = db.GetQuestionMode(mode);
             totalQuestion = questionPlay.Count;
             mCountdown = new CountDown(this, TIMEOUT, INTERVAL);
