@@ -24,7 +24,8 @@ namespace XamarinFlagsQuizApp.Acitivty
         static CountDown mCountdown;
         List<Question> questionPlay = new List<Question>();
         DbHelper.DbHelper db;
-        static int index, score, thisQuestion, totalQuestion, correctAnswer;
+        int score, thisQuestion, totalQuestion, correctAnswer;
+        static int index;
         String mode = String.Empty;
 
         //Control
